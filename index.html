@@ -1,27 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work in Progress</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        h1 {
-            font-size: 2.5em;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <h1>Work in Progress</h1>
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Docondee - Andy Holst’s consultancy, turning chaos into results with meticulous planning and reliable delivery." />
+        <meta name="author" content="Andy Holst, Docondee" />
+        <title>Docondee: On Time, Done Right</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/navbar-logo.svg" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .portfolio-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+            .portfolio-item {
+                text-align: center;
+            }
+            .section-button {
+                margin-top: 20px;
+            }
+            .text-muted {
+                color: #495057 !important;
+            }
+            .nav-link i {
+                font-size: 1.5rem;
+                vertical-align: middle;
+            }
+            .contact-buttons .btn {
+                margin: 10px;
+                padding: 15px 30px;
+                font-size: 1.25rem;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center flex-column" href="#page-top">
+                    <div class="d-flex align-items-center">
+                        <img src="assets/img/navbar-logo.svg" alt="Docondee Logo" style="height: 15rem; margin-right: 10px;" />
+                        <span style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700;">Docondee</span>
+                    </div>
+                    <span style="font-size: 1rem; font-style: italic; color: #ffd700; margin-top: 5px;">On Time, Done Right</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#how-i-work">How I Work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mailto:support@docondee.com" title="support@docondee.com"><i class="fas fa-envelope"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://calendly.com/docondee/docondee-consultancy" target="_blank" title="Book a Call"><i class="fas fa-calendar-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead -->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading">Welcome to Docondee</div>
+                <div class="masthead-heading text-uppercase">Your Projects, On Time, Done Right</div>
+                <a class="btn btn-primary btn-xl text-uppercase" href="#services">Discover How</a>
+            </div>
+        </header>
+        <!-- Services -->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">What I Bring</h2>
+                    <h3 class="section-subheading text-muted">Turning your vision into reality—on time, secure, and without the chaos.</h3>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-road fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Rock-Solid Roadmaps</h4>
+                        <p class="text-muted">I create detailed plans that align your team and hit your deadlines—keeping costs down and progress on track.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shield-alt fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Secure Systems</h4>
+                        <p class="text-muted">I deliver reliable, scalable solutions that protect your business and keep everything running smoothly.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">High-Performing Teams</h4>
+                        <p class="text-muted">I guide and empower your crew to deliver solid results on time—without burnout or excuses.</p>
+                    </div>
+                </div>
+                <div class="text-center section-button">
+                    <a class="btn btn-primary btn-xl text-uppercase" href="#how-i-work">Follow My Process</a>
+                </div>
+            </div>
+        </section>
+        <!-- How I Work Section -->
+        <section class="page-section" id="how-i-work">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">How I Work</h2>
+                    <h3 class="section-subheading text-muted">I turn chaos into results—here’s how I make it happen for you.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4>My Approach</h4>
+                        <p class="text-muted">As a DevSecOps Software Engineer, I’ve seen projects fail due to poor planning and misaligned teams. I fix that with:</p>
+                        <ul class="text-muted">
+                            <li><strong>Detailed Planning</strong>: I break projects into clear steps with timelines and buffers—ensuring your team knows what to do and when.</li>
+                            <li><strong>Fast Prototypes</strong>: I build working models quickly to align on your vision early, avoiding costly rework.</li>
+                            <li><strong>Smart Automation</strong>: I streamline processes to cut waste, delivering secure, scalable systems that save time and money.</li>
+                            <li><strong>Team Collaboration</strong>: I set clear goals and guide your crew, empowering them to deliver results on time.</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <h4>Your Wins</h4>
+                        <p class="text-muted">Here’s what you get when I step in:</p>
+                        <ul class="text-muted">
+                            <li><strong>Deadlines Met</strong>: Projects ship on time—no delays, no stress.</li>
+                            <li><strong>Cost Savings</strong>: Early alignment and automation keep your budget intact.</li>
+                            <li><strong>Solid Outcomes</strong>: High-quality results that meet your needs.</li>
+                            <li><strong>Stress-Free Delivery</strong>: I manage the details, so you can focus on your business.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center section-button">
+                    <a class="btn btn-primary btn-xl text-uppercase" href="#portfolio">See My Work</a>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio Grid -->
+        <section class="page-section bg-light" id="portfolio">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">My Work</h2>
+                    <h3 class="section-subheading text-muted">Delivering Results, On Time</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="Swedish Heritage Project" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Swedish Heritage</div>
+                                <div class="portfolio-caption-subheading text-muted">Secured Legacy Systems</div>
+                                <p class="text-muted small">Client: Swedish National Heritage Board</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="Worldline Project" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Worldline</div>
+                                <div class="portfolio-caption-subheading text-muted">Fraud-Proof Payments</div>
+                                <p class="text-muted small">Client: Worldline</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="Vattenfall Project" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Vattenfall</div>
+                                <div class="portfolio-caption-subheading text-muted">Energy Systems Upgrade</div>
+                                <p class="text-muted small">Client: Vattenfall AB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="1177 Vårdguiden Project" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">1177 Vårdguiden</div>
+                                <div class="portfolio-caption-subheading text-muted">Healthcare Simplified</div>
+                                <p class="text-muted small">Client: Inera AB</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="Swedish Police Project" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">Swedish Police</div>
+                                <div class="portfolio-caption-subheading text-muted">Justice Systems Revamp</div>
+                                <p class="text-muted small">Client: Swedish Police Force</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center section-button">
+                    <a class="btn btn-primary btn-xl text-uppercase" href="#about">Learn More About Me</a>
+                </div>
+            </div>
+        </section>
+        <!-- About -->
+        <section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">My Story</h2>
+                    <h3 class="section-subheading text-muted">I founded Docondee to meet deadlines and deliver solid results with optimized workflows.</h3>
+                </div>
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="Early Days" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Early Days</h4>
+                                <h4 class="subheading">Driven by Systems</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">I started with an i386 and Linux, obsessed with making things faster and better—planting the seeds for Docondee.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="2015-2017" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2015-2017</h4>
+                                <h4 class="subheading">Proven Under Pressure</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">At the Swedish Police, I built critical systems and earned my IT architect certification after hours—shaping my focus on reliable delivery.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="2018-2020" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2018-2020</h4>
+                                <h4 class="subheading">Taming the Chaos</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">I saw projects stumble from vague goals and silos—it drove me to perfect teamwork and precision.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="2021-2024" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2021-2024</h4>
+                                <h4 class="subheading">Delivering Wins</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">I combine sharp planning and technical expertise to meet your goals efficiently and effectively.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/5.jpg" alt="2025-Present" /></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>2025-Present</h4>
+                                <h4 class="subheading">Leading with Passion</h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">I thrive on rapid & challenging assignments and high-stakes projects that push me to grow. I lead with passion, turning chaos into clarity with clear plans and results clients can trust.</p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h4>
+                                Let’s Win
+                                <br />
+                                Together!
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+                <div class="text-center section-button">
+                    <a class="btn btn-primary btn-xl text-uppercase" href="#team">Meet Me</a>
+                </div>
+            </div>
+        </section>
+        <!-- Team -->
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Meet Me</h2>
+                    <h3 class="section-subheading text-muted">I’m Andy Holst, the force behind Docondee, turning chaos into clarity.</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="Andy Holst" />
+                            <h4>Andy Holst</h4>
+                            <p class="text-muted">Founder & DevSecOps Engineer</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://x.com/andy_a_holst" aria-label="Andy Holst Twitter Profile"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/andy.c.holst" aria-label="Andy Holst Facebook Profile"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/andy-holst-devops/" aria-label="Andy Holst LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <p class="large text-muted">I’m Andy Holst, and Docondee is my consultancy. With over 14 years as a software engineer and specializing in DevSecOps—I tackle tough challenges like tight budgets and poor planning with sharp execution. I earned my degree at Linnaeus University and am a certified IT Architect. My focus? Delivering on time, no matter what. Let’s make your project a success.</p>
+                    </div>
+                </div>
+                <div class="text-center section-button">
+                    <a class="btn btn-primary btn-xl text-uppercase" href="#contact">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+        <!-- Clients -->
+        <div class="py-5">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Clients I’ve Helped</h2>
+                    <p class="text-muted">Organizations I’ve worked with. Logos are for illustration—no current ties implied.</p>
+                </div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/swedish-heritage-colored.svg" alt="Swedish Heritage Logo" aria-label="Swedish Heritage Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/worldline-logo.svg" alt="Worldline Logo" aria-label="Worldline Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/vattenfall.svg" alt="Vattenfall Logo" aria-label="Vattenfall Logo" /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/polisen.svg" alt="Polisen Logo" aria-label="Polisen Logo" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact -->
+        <section class="page-section" id="contact" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase" style="color: #003366;">Get in Touch</h2>
+                    <h3 class="section-subheading text-muted">Ready to hit your deadlines and achieve your goals? Let’s talk.</h3>
+                </div>
+                <form id="contactForm" data-sb-form-api-token="0964fc31-2e2a-41a3-a2cc-b4138938fd8a">
+                    <div class="row align-items-stretch mb-5">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group form-group-textarea mb-md-0">
+                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center text-success mb-3">
+                            <div class="fw-bolder">Message Sent!</div>
+                            I’ll get back to you soon.
+                        </div>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">
+                            <div class="fw-bolder">Something Went Wrong</div>
+                            Try again or email me at support@docondee.com.
+                        </div>
+                    </div>
+                    <div class="text-center contact-buttons">
+                        <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit">Send Message</button>
+                        <a class="btn btn-primary btn-xl text-uppercase" href="mailto:support@docondee.com"><i class="fas fa-envelope"></i> Email Me</a>
+                        <a class="btn btn-primary btn-xl text-uppercase" href="https://calendly.com/docondee/docondee-consultancy" target="_blank"><i class="fas fa-calendar-alt"></i> Book a Call</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="footer py-4 bg-dark text-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright © <span id="year"></span> Docondee.com. All rights reserved.</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        <a class="btn btn-dark btn-social mx-2" href="https://x.com/andy_a_holst" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/andy.c.holst" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/andy-holst-devops/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Portfolio Modals -->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Swedish National Heritage Board</h2>
+                                    <p class="item-intro text-muted">Secured legacy systems, delivered on time.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="Swedish Heritage Project" />
+                                    <p>For the Swedish National Heritage Board, I designed and delivered detailed documentation and code to secure their aging systems while launching new services. I ensured a smooth migration to Kubernetes with Spring Security, hitting the deadline spot on. <em>Past work; no current affiliation.</em></p>
+                                    <ul class="list-inline">
+                                        <li><strong>Client:</strong> Swedish National Heritage Board</li>
+                                        <li><strong>Outcome:</strong> Secure systems, on-time delivery</li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Worldline</h2>
+                                    <p class="item-intro text-muted">Fraud-proof payments, delivered ahead of schedule.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="Worldline Project" />
+                                    <p>For Worldline, I delivered AML risk solutions, crafting detailed pipelines to boost quality and speed. My AWS-powered automation got us ahead of schedule, cutting costs and enhancing scalability. <em>Past work; no current affiliation.</em></p>
+                                    <ul class="list-inline">
+                                        <li><strong>Client:</strong> Worldline</li>
+                                        <li><strong>Outcome:</strong> Early delivery, cost savings</li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Vattenfall AB</h2>
+                                    <p class="item-intro text-muted">Energy systems upgraded, delivered on time.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="Vattenfall Project" />
+                                    <p>For Vattenfall, I replaced outdated systems with modern solutions, building high-quality DevOps pipelines. My clear roadmap and automated testing ensured on-time delivery, saving budget and boosting efficiency. <em>Past work; no current affiliation.</em></p>
+                                    <ul class="list-inline">
+                                        <li><strong>Client:</strong> Vattenfall AB</li>
+                                        <li><strong>Outcome:</strong> On-time delivery, improved efficiency</li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Inera AB - 1177 Vårdguiden</h2>
+                                    <p class="item-intro text-muted">Healthcare admin simplified, delivered on time.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="1177 Vårdguiden Project" />
+                                    <p>For Inera AB, I replaced an old healthcare admin system for 1177 Vårdguiden. I set clear goals and drove rigorous testing, delivering a streamlined system on time—boosting efficiency with no hassle. <em>Past work; no current affiliation.</em></p>
+                                    <ul class="list-inline">
+                                        <li><strong>Client:</strong> Inera AB</li>
+                                        <li><strong>Outcome:</strong> On-time delivery, better efficiency</li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="modal-body">
+                                    <h2 class="text-uppercase">Swedish Police Force</h2>
+                                    <p class="item-intro text-muted">Justice systems modernized, delivered on time.</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="Swedish Police Project" />
+                                    <p>For the Swedish Police, I replaced a mainframe system with a modern Java EE and Spring Framework solution, adding an Angular frontend. My meticulous planning delivered a scalable, cost-effective upgrade on schedule. <em>Past work; no current affiliation.</em></p>
+                                    <ul class="list-inline">
+                                        <li><strong>Client:</strong> Swedish Police Force</li>
+                                        <li><strong>Outcome:</strong> On-time, cost-effective upgrade</li>
+                                    </ul>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS -->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+            window.addEventListener('scroll', function() {
+                var nav = document.getElementById('mainNav');
+                if (window.scrollY > 50) {
+                    nav.classList.add('bg-dark');
+                    nav.classList.add('navbar-dark');
+                    nav.classList.remove('navbar-light');
+                } else {
+                    nav.classList.remove('bg-dark');
+                    nav.classList.remove('navbar-dark');
+                    nav.classList.add('navbar-light');
+                }
+            });
+        </script>
+    </body>
 </html>
