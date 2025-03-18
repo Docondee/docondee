@@ -22,7 +22,7 @@
                 text-align: center;
             }
             .section-button {
-                margin-top: 20px;
+                margin-top: 1.25rem;
             }
             .text-muted {
                 color: #495057 !important;
@@ -32,9 +32,109 @@
                 vertical-align: middle;
             }
             .contact-buttons .btn {
-                margin: 10px;
-                padding: 15px 30px;
+                margin: 0.625rem;
+                padding: 0.9375rem 1.875rem;
                 font-size: 1.25rem;
+            }
+            .carousel-item {
+                text-align: center;
+                padding: 2.5rem 1.25rem;
+                font-family: 'Roboto Slab', serif;
+            }
+            .testimonial-wrapper {
+                max-width: 50rem;
+                margin: 0 auto;
+                padding: 0 1.25rem;
+            }
+            .testimonial-img {
+                width: 7.5rem;
+                height: 7.5rem;
+                object-fit: contain;
+                margin-bottom: 1.25rem;
+            }
+            .carousel-indicators {
+                bottom: 1.25rem;
+            }
+            .carousel-indicators li {
+                width: 0.9375rem;
+                height: 0.9375rem;
+                border-radius: 50%;
+                background-color: #6699cc;
+                border: 1px solid #003366;
+                margin: 0 0.625rem;
+                transition: background-color 0.3s ease;
+            }
+            .carousel-indicators .active {
+                background-color: #003366;
+            }
+            .carousel-control-prev {
+                position: absolute;
+                top: 50%;
+                left: 1.25rem;
+                transform: translateY(-50%);
+                width: 3.125rem;
+                z-index: 10;
+            }
+            .carousel-control-next {
+                position: absolute;
+                top: 50%;
+                right: 1.25rem;
+                transform: translateY(-50%);
+                width: 3.125rem;
+                z-index: 10;
+            }
+            .carousel-control-prev-icon,
+            .carousel-control-next-icon {
+                width: 2.5rem;
+                height: 2.5rem;
+                background-color: #003366;
+                border-radius: 50%;
+                background-size: 60%;
+                background-position: center;
+            }
+            .carousel-control-prev:hover .carousel-control-prev-icon,
+            .carousel-control-next:hover .carousel-control-next-icon {
+                background-color: #ffd700;
+            }
+            .testimonial-quote {
+                font-style: italic;
+                font-size: 1.2rem;
+                margin-bottom: 0.9375rem;
+                color: #495057;
+                position: relative;
+                padding: 0 1.25rem;
+            }
+            .testimonial-quote::before {
+                content: '“';
+                font-size: 3rem;
+                color: #003366;
+                position: absolute;
+                left: 0;
+                top: -0.625rem;
+            }
+            .testimonial-quote::after {
+                content: '”';
+                font-size: 3rem;
+                color: #003366;
+                position: absolute;
+                right: 0;
+                bottom: -0.625rem;
+            }
+            .testimonial-author {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                color: #003366;
+            }
+            @media (min-width: 992px) {
+                .navbar-nav .nav-item:not(.icon-item) .nav-link {
+                    padding-right: 0.5rem;
+                    padding-left: 0.5rem;
+                    font-size: 0.9rem;
+                }
+                .navbar-nav .nav-item.icon-item .nav-link {
+                    padding: 0.5rem;
+                }
             }
         </style>
     </head>
@@ -56,18 +156,20 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#how-i-work">How I Work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#approach">Approach</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="mailto:support@docondee.com" title="support@docondee.com"><i class="fas fa-envelope"></i></a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://calendly.com/docondee/docondee-consultancy" target="_blank" title="Book a Call"><i class="fas fa-calendar-alt"></i></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                        <li class="nav-item icon-item"><a class="nav-link" href="mailto:support@docondee.com" title="support@docondee.com"><i class="fas fa-envelope"></i></a></li>
+                        <li class="nav-item icon-item"><a class="nav-link" href="https://calendly.com/docondee/docondee-consultancy" target="_blank" title="Book a Call"><i class="fas fa-calendar-alt"></i></a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Masthead -->
+
+        <!-- Header -->
         <header class="masthead">
             <div class="container">
                 <div class="masthead-subheading">Welcome to Docondee</div>
@@ -75,7 +177,8 @@
                 <a class="btn btn-primary btn-xl text-uppercase" href="#services">Discover How</a>
             </div>
         </header>
-        <!-- Services -->
+
+        <!-- Services Section -->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
@@ -109,21 +212,22 @@
                     </div>
                 </div>
                 <div class="text-center section-button">
-                    <a class="btn btn-primary btn-xl text-uppercase" href="#how-i-work">Follow My Process</a>
+                    <a class="btn btn-primary btn-xl text-uppercase" href="#approach">Follow My Process</a>
                 </div>
             </div>
         </section>
+
         <!-- How I Work Section -->
-        <section class="page-section" id="how-i-work">
+        <section class="page-section" id="approach">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">How I Work</h2>
+                    <h2 class="section-heading text-uppercase">My Approach</h2>
                     <h3 class="section-subheading text-muted">I turn chaos into results—here’s how I make it happen for you.</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <h4>My Approach</h4>
-                        <p class="text-muted">As a DevSecOps Software Engineer, I’ve seen projects fail due to poor planning and misaligned teams. I fix that with:</p>
+                        <p class="text-muted">As a DevSecOps Software Engineer and High Performer Leader, I’ve seen projects fail due to poor planning and misaligned teams. I fix that with:</p>
                         <ul class="text-muted">
                             <li><strong>Detailed Planning</strong>: I break projects into clear steps with timelines and buffers—ensuring your team knows what to do and when.</li>
                             <li><strong>Fast Prototypes</strong>: I build working models quickly to align on your vision early, avoiding costly rework.</li>
@@ -147,12 +251,13 @@
                 </div>
             </div>
         </section>
-        <!-- Portfolio Grid -->
+
+        <!-- Portfolio Section -->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">My Work</h2>
-                    <h3 class="section-subheading text-muted">Delivering Results, On Time</h3>
+                    <h2 class="section-heading text-uppercase">Portfolio</h2>
+                    <h3 class="section-subheading text-muted">Real Results from Real Challenges</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -165,8 +270,8 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Swedish Heritage</div>
-                                <div class="portfolio-caption-subheading text-muted">Secured Legacy Systems</div>
-                                <p class="text-muted small">Client: Swedish National Heritage Board</p>
+                                <div class="portfolio-caption-subheading text-muted">Securing Legacy/Modern Systems</div>
+                                <p class="text-muted small">Swedish National Heritage Board</p>
                             </div>
                         </div>
                     </div>
@@ -180,8 +285,8 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Worldline</div>
-                                <div class="portfolio-caption-subheading text-muted">Fraud-Proof Payments</div>
-                                <p class="text-muted small">Client: Worldline</p>
+                                <div class="portfolio-caption-subheading text-muted">Fraud-Proof Transactions</div>
+                                <p class="text-muted small">Worldline</p>
                             </div>
                         </div>
                     </div>
@@ -195,8 +300,8 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Vattenfall</div>
-                                <div class="portfolio-caption-subheading text-muted">Energy Systems Upgrade</div>
-                                <p class="text-muted small">Client: Vattenfall AB</p>
+                                <div class="portfolio-caption-subheading text-muted">Modernizing Energy Systems</div>
+                                <p class="text-muted small">Vattenfall AB</p>
                             </div>
                         </div>
                     </div>
@@ -210,8 +315,8 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">1177 Vårdguiden</div>
-                                <div class="portfolio-caption-subheading text-muted">Healthcare Simplified</div>
-                                <p class="text-muted small">Client: Inera AB</p>
+                                <div class="portfolio-caption-subheading text-muted">Modernizing Health Center System</div>
+                                <p class="text-muted small">Inera AB</p>
                             </div>
                         </div>
                     </div>
@@ -225,8 +330,8 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Swedish Police</div>
-                                <div class="portfolio-caption-subheading text-muted">Justice Systems Revamp</div>
-                                <p class="text-muted small">Client: Swedish Police Force</p>
+                                <div class="portfolio-caption-subheading text-muted">Justice System Overhaul</div>
+                                <p class="text-muted small">Swedish Police Force</p>
                             </div>
                         </div>
                     </div>
@@ -236,12 +341,13 @@
                 </div>
             </div>
         </section>
-        <!-- About -->
+
+        <!-- About Section -->
         <section class="page-section" id="about">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">My Story</h2>
-                    <h3 class="section-subheading text-muted">I founded Docondee to meet deadlines and deliver solid results with optimized workflows.</h3>
+                    <h3 class="section-subheading text-muted">From chaos to clarity—how I’ve built a career delivering results.</h3>
                 </div>
                 <ul class="timeline">
                     <li>
@@ -251,7 +357,7 @@
                                 <h4>Early Days</h4>
                                 <h4 class="subheading">Driven by Systems</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">I started with an i386 and Linux, obsessed with making things faster and better—planting the seeds for Docondee.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Started with an i386 and Linux, obsessed with making things faster and better—laying the groundwork for my problem-solving approach.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
@@ -259,9 +365,9 @@
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>2015-2017</h4>
-                                <h4 class="subheading">Proven Under Pressure</h4>
+                                <h4 class="subheading">Proving It Under Pressure</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">At the Swedish Police, I built critical systems and earned my IT architect certification after hours—shaping my focus on reliable delivery.</p></div>
+                            <div class="timeline-body"><p class="text-muted">At the Swedish Police, I replaced a mainframe with a modern system based On Java EE, Spring Framework and Angular, earning my IT architect certification after hours—honing my focus on delivery.</p></div>
                         </div>
                     </li>
                     <li>
@@ -271,7 +377,7 @@
                                 <h4>2018-2020</h4>
                                 <h4 class="subheading">Taming the Chaos</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">I saw projects stumble from vague goals and silos—it drove me to perfect teamwork and precision.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Faced vague goals and silos head-on, perfecting teamwork and precision to keep projects on track.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
@@ -281,7 +387,7 @@
                                 <h4>2021-2024</h4>
                                 <h4 class="subheading">Delivering Wins</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">I combine sharp planning and technical expertise to meet your goals efficiently and effectively.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Combined sharp planning and technical know-how to meet deadlines and exceed expectations.</p></div>
                         </div>
                     </li>
                     <li>
@@ -291,7 +397,7 @@
                                 <h4>2025-Present</h4>
                                 <h4 class="subheading">Leading with Passion</h4>
                             </div>
-                            <div class="timeline-body"><p class="text-muted">I thrive on rapid & challenging assignments and high-stakes projects that push me to grow. I lead with passion, turning chaos into clarity with clear plans and results clients can trust.</p></div>
+                            <div class="timeline-body"><p class="text-muted">Thriving on tough challenges, I turn chaos into clarity with plans that deliver results you can trust.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
@@ -309,12 +415,13 @@
                 </div>
             </div>
         </section>
-        <!-- Team -->
+
+        <!-- Team Section -->
         <section class="page-section bg-light" id="team">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Meet Me</h2>
-                    <h3 class="section-subheading text-muted">I’m Andy Holst, the force behind Docondee, turning chaos into clarity.</h3>
+                    <h3 class="section-subheading text-muted">I’m Andy Holst, your partner in turning chaos into results.</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-12">
@@ -330,7 +437,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
-                        <p class="large text-muted">I’m Andy Holst, and Docondee is my consultancy. With over 14 years as a software engineer and specializing in DevSecOps—I tackle tough challenges like tight budgets and poor planning with sharp execution. I earned my degree at Linnaeus University and am a certified IT Architect. My focus? Delivering on time, no matter what. Let’s make your project a success.</p>
+                        <p class="large text-muted">I’m Andy Holst, and Docondee is my consultancy. With over 14 years as a software engineer and DevSecOps specialist and High Perfomer Leader, I’ve tackled tight budgets, poor planning, and misaligned teams head-on. I hold a degree from Linnaeus University and am a certified IT Architect. My mission? Deliver your projects on time, every time—turning your chaos into clarity.</p>
                     </div>
                 </div>
                 <div class="text-center section-button">
@@ -338,30 +445,8 @@
                 </div>
             </div>
         </section>
-        <!-- Clients -->
-        <div class="py-5">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Clients I’ve Helped</h2>
-                    <p class="text-muted">Organizations I’ve worked with. Logos are for illustration—no current ties implied.</p>
-                </div>
-                <div class="row justify-content-center align-items-center">
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/swedish-heritage-colored.svg" alt="Swedish Heritage Logo" aria-label="Swedish Heritage Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/worldline-logo.svg" alt="Worldline Logo" aria-label="Worldline Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/vattenfall.svg" alt="Vattenfall Logo" aria-label="Vattenfall Logo" /></a>
-                    </div>
-                    <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="assets/img/logos/polisen.svg" alt="Polisen Logo" aria-label="Polisen Logo" /></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact -->
+
+        <!-- Contact Section -->
         <section class="page-section" id="contact" style="background-color: #f8f9fa;">
             <div class="container">
                 <div class="text-center">
@@ -408,6 +493,43 @@
                 </form>
             </div>
         </section>
+
+        <!-- Testimonials Section -->
+        <section class="page-section" id="testimonials">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Testimonials</h2>
+                    <h3 class="section-subheading text-muted">What clients say about my work.</h3>
+                </div>
+                <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></li>
+                        <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-wrapper">
+                                <a href="#portfolioModal5" data-bs-toggle="modal">
+                                    <img class="testimonial-img" src="assets/img/logos/polisen.svg" alt="Swedish Police Logo" />
+                                </a>
+                                <p class="testimonial-quote">Andy started as a junior developer at the Swedish Police Force, quickly mastering skills like automating testing and streamlining workflows to keep projects on time and under budget. His early adoption of DevOps and after-hours IT architect certification reflected his drive for reliable systems. Through initiative and teamwork, he earned senior status fast, hinting at his future leadership in high-performing teams.</p>
+                                <p class="testimonial-author">- Nazar Jaber, Solution Architect</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer class="footer py-4 bg-dark text-white">
             <div class="container">
@@ -421,6 +543,7 @@
                 </div>
             </div>
         </footer>
+
         <!-- Portfolio Modals -->
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
@@ -431,13 +554,9 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Swedish National Heritage Board</h2>
-                                    <p class="item-intro text-muted">Secured legacy systems, delivered on time.</p>
+                                    <p class="item-intro text-muted">Securing Legacy Systems, Delivered On Time</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="Swedish Heritage Project" />
-                                    <p>For the Swedish National Heritage Board, I designed and delivered detailed documentation and code to secure their aging systems while launching new services. I ensured a smooth migration to Kubernetes with Spring Security, hitting the deadline spot on. <em>Past work; no current affiliation.</em></p>
-                                    <ul class="list-inline">
-                                        <li><strong>Client:</strong> Swedish National Heritage Board</li>
-                                        <li><strong>Outcome:</strong> Secure systems, on-time delivery</li>
-                                    </ul>
+                                    <p>Facing a tight two-month deadline in early 2025, I stepped in as a DevSecOps Engineer and Solution Architect to secure the Swedish National Heritage Board’s aging systems while supporting their shift to new services. Poor planning had left their migration at risk—vague security goals and siloed teams threatened delays. I wrote detailed documentation and code aligning their Kubernetes setup with Zero Trust principles, integrating Spring Security and OAuth 2.0 to lock down access. By automating vulnerability scans with security tools, I caught risks early, cutting manual review time by weeks. The result? A secure, scalable system delivered on schedule with clear documentation and code, saving them from rework costs and keeping their timeline intact. <em>Past work; no current affiliation.</em></p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -458,13 +577,9 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Worldline</h2>
-                                    <p class="item-intro text-muted">Fraud-proof payments, delivered ahead of schedule.</p>
+                                    <p class="item-intro text-muted">Fraud-Proof Transactions, Ahead of Schedule</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="Worldline Project" />
-                                    <p>For Worldline, I delivered AML risk solutions, crafting detailed pipelines to boost quality and speed. My AWS-powered automation got us ahead of schedule, cutting costs and enhancing scalability. <em>Past work; no current affiliation.</em></p>
-                                    <ul class="list-inline">
-                                        <li><strong>Client:</strong> Worldline</li>
-                                        <li><strong>Outcome:</strong> Early delivery, cost savings</li>
-                                    </ul>
+                                    <p>From 2021 to 2024, I led Worldline’s DevSecOps efforts to modernize transaction systems and fight AML risks. Their old setup suffered from manual processes and fuzzy requirements, slowing merchant onboarding and risking fraud. I built serverless AWS Lambda solutions and microservices with Spring Boot 3, Python by automating risk analysis to slash review times from weeks to days. Clear goals kept us focused, while Jenkins pipelines cut deployment errors to a minimum. We delivered ahead of schedule, saving costs on manual fixes and boosting merchant trust with faster, safer onboarding. <em>Past work; no current affiliation.</em></p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -485,13 +600,9 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Vattenfall AB</h2>
-                                    <p class="item-intro text-muted">Energy systems upgraded, delivered on time.</p>
+                                    <p class="item-intro text-muted">Modernizing Energy Systems, On Time</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="Vattenfall Project" />
-                                    <p>For Vattenfall, I replaced outdated systems with modern solutions, building high-quality DevOps pipelines. My clear roadmap and automated testing ensured on-time delivery, saving budget and boosting efficiency. <em>Past work; no current affiliation.</em></p>
-                                    <ul class="list-inline">
-                                        <li><strong>Client:</strong> Vattenfall AB</li>
-                                        <li><strong>Outcome:</strong> On-time delivery, improved efficiency</li>
-                                    </ul>
+                                    <p>From 2019 to 2021, I tackled Vattenfall’s outdated Energy Site system as a DevOps Software Engineer. Unrealistic deadlines and ignored technical debt had bogged down their electricity trading platform. I replaced Java EE 5 with Spring Boot 2 microservices, using Docker and Kubernetes to containerize and scale. Automated testing with JUnit 5 caught issues early, avoiding last-minute chaos, while Kafka synced old and new systems without a hitch. My detailed roadmap—built with the team—ensured we hit every deadline, cutting operational costs and boosting system reliability for their distributors. <em>Past work; no current affiliation.</em></p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -512,13 +623,9 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Inera AB - 1177 Vårdguiden</h2>
-                                    <p class="item-intro text-muted">Healthcare admin simplified, delivered on time.</p>
+                                    <p class="item-intro text-muted">Streamlining Healthcare Admin, On Schedule</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="1177 Vårdguiden Project" />
-                                    <p>For Inera AB, I replaced an old healthcare admin system for 1177 Vårdguiden. I set clear goals and drove rigorous testing, delivering a streamlined system on time—boosting efficiency with no hassle. <em>Past work; no current affiliation.</em></p>
-                                    <ul class="list-inline">
-                                        <li><strong>Client:</strong> Inera AB</li>
-                                        <li><strong>Outcome:</strong> On-time delivery, better efficiency</li>
-                                    </ul>
+                                    <p>In 2018-2019, I overhauled Inera’s old admin system for 1177 Vårdguiden as a TDD System Developer. With siloed teams and unclear accountability had slowed progress. I built a Java EE 7 backend with Angular, automating data migration from old system to the new system with JPA to move clinic info seamlessly. Detailed automated system tests and improved automated pipelines and mob programming skyrocketed the productivity with less mistakes, while my collaboration with the solution architect clarified goals—like “admins manage 50 clinics daily with better and modern system.” We delivered on time, streamlining operations nationwide and saving rework costs. <em>Past work; no current affiliation.</em></p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -539,13 +646,10 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Swedish Police Force</h2>
-                                    <p class="item-intro text-muted">Justice systems modernized, delivered on time.</p>
+                                    <p class="item-intro text-muted">Justice System Overhaul, On Time</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="Swedish Police Project" />
-                                    <p>For the Swedish Police, I replaced a mainframe system with a modern Java EE and Spring Framework solution, adding an Angular frontend. My meticulous planning delivered a scalable, cost-effective upgrade on schedule. <em>Past work; no current affiliation.</em></p>
-                                    <ul class="list-inline">
-                                        <li><strong>Client:</strong> Swedish Police Force</li>
-                                        <li><strong>Outcome:</strong> On-time, cost-effective upgrade</li>
-                                    </ul>
+                                    <p>From 2015 to 2017, I transformed the Swedish Police’s Judicial Information System from a creaky mainframe to a modern Java EE 6 and Spring Framework setup with an Angular frontend. Starting as a junior developer, I tackled poor planning and manual testing head-on, automating workflows with Jenkins and JUnit to save weeks of effort. I took over the BR-adapter mid-project, learning Spring fast to keep it on track. Clear goals—like “do what other teams couldn't accomplish”—and team collaboration delivered a scalable system on schedule, cutting huge maintenance costs. <em>Past work; no current affiliation.</em></p>
+                                    <p><a href="#testimonials" data-bs-dismiss="modal">See client testimonials</a></p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -557,9 +661,9 @@
                 </div>
             </div>
         </div>
-        <!-- Bootstrap core JS -->
+
+        <!-- Scripts -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS -->
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
         <script>
@@ -575,6 +679,33 @@
                     nav.classList.remove('navbar-dark');
                     nav.classList.add('navbar-light');
                 }
+            });
+            // Smooth scrolling for anchor links with modal closure and delay
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (!targetElement) return;
+
+                    // Close any open Bootstrap modals
+                    const openModals = document.querySelectorAll('.modal.show');
+                    if (openModals.length > 0) {
+                        openModals.forEach(modal => {
+                            const bsModal = bootstrap.Modal.getInstance(modal);
+                            if (bsModal) {
+                                bsModal.hide();
+                            }
+                        });
+                        // Wait for modal to fully close (Bootstrap fade animation is ~150ms)
+                        setTimeout(() => {
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                        }, 200);
+                    } else {
+                        // No modal open, scroll immediately
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
             });
         </script>
     </body>
