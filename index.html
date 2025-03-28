@@ -47,8 +47,8 @@
                 padding: 0 1.25rem;
             }
             .testimonial-img {
-                width: 7.5rem;
-                height: 7.5rem;
+                width: 9rem;
+                height: 9rem;
                 object-fit: contain;
                 margin-bottom: 1.25rem;
             }
@@ -516,11 +516,10 @@
                     <h2 class="section-heading text-uppercase">Testimonials</h2>
                     <h3 class="section-subheading text-muted">What clients say about my work.</h3>
                 </div>
-                <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div id="testimonialCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="30000">
                     <ol class="carousel-indicators">
                         <li data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></li>
                         <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -529,7 +528,21 @@
                                     <img class="testimonial-img" src="assets/img/logos/polisen.svg" alt="Swedish Police Logo" />
                                 </a>
                                 <p class="testimonial-quote">Andy started as a junior developer at the Swedish Police Force, quickly mastering skills like automating testing and streamlining workflows to keep projects on time and under budget. His early adoption of DevOps and after-hours IT architect certification reflected his drive for reliable systems. Through initiative and teamwork, he earned senior status fast, hinting at his future leadership in high-performing teams.</p>
-                                <p class="testimonial-author">- Nazar Jaber, Solution Architect</p>
+                                <p class="testimonial-author">- Nazar Jaber, Senior Solution Architect</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-wrapper">
+                                <a href="#portfolioModal3" data-bs-toggle="modal">
+                                    <img class="testimonial-img" src="assets/img/logos/vattenfall.svg" alt="Vattenfall Logo" />
+                                </a>
+                                <div class="testimonial-quote">
+                                    <p>Andy is a warrior of software engineering! He applies his skills to the limit and beyond, strives through tough and tedious/draining technical and social situations and tries to get others to step up and do the same!</p>
+                                    <p>We met in a project moving from a monolithic proprietary system without anything close to continuous deployment and DevOps mindset to a open standard micro service ecosystem with quality and continuous deployment built-in.</p>
+                                    <p>We split paths late 2021 and since then I hear in our conversations that he steadily grows, taking on greater responsibility and perfecting when to push through and when to ease back a bit.</p>
+                                    <p>If Andy says he can get something done, it will be done! I would happily join forces with Andy again to make great systems and great companies!</p>
+                                </div>
+                                <p class="testimonial-author">- Gunnar Gustavsson, Senior Solution Architect</p>
                             </div>
                         </div>
                     </div>
@@ -614,6 +627,7 @@
                                     <p class="item-intro text-muted">Modernized energy trading, improved reliability</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="Vattenfall Project" />
                                     <p>From 2019 to 2021, I modernized Vattenfall’s energy trading platform, replacing outdated systems with scalable solutions. My roadmap ensured we hit every deadline, cutting costs and boosting reliability. <em>Past work; no current affiliation.</em></p>
+                                    <p><a href="#testimonials" data-bs-dismiss="modal">See client testimonials</a></p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
