@@ -289,11 +289,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="Swedish Heritage Project" />
+                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="Swedish National Heritage Board Project" />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Swedish Heritage</div>
-                                <div class="portfolio-caption-subheading text-muted">Secured legacy & modern systems with secure architecture and delivered on time</div>
+                                <div class="portfolio-caption-heading">Swedish National Heritage Board</div>
+                                <div class="portfolio-caption-subheading text-muted">Secured legacy and modern systems using a secure architecture, delivered on time</div>
                                 <p class="text-muted small">Swedish National Heritage Board</p>
                             </div>
                         </div>
@@ -447,7 +447,7 @@
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="assets/img/team/1.jpg" alt="Andy Holst" />
                             <h4>Andy Holst</h4>
-                            <p class="text-muted">Founder & DevSecOps Softare Engineer Expert</p>
+                            <p class="text-muted">Founder & DevSecOps Software Engineer Expert</p>
                             <a class="btn btn-dark btn-social mx-2" href="https://x.com/andy_a_holst" aria-label="Andy Holst Twitter Profile"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/andy.c.holst" aria-label="Andy Holst Facebook Profile"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/andy-holst-devops/" aria-label="Andy Holst LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
@@ -520,9 +520,10 @@
                     <ol class="carousel-indicators">
                         <li data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></li>
                         <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></li>
+                        <li data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active" data-testimonial-id="1">
                             <div class="testimonial-wrapper">
                                 <a href="#portfolioModal5" data-bs-toggle="modal">
                                     <img class="testimonial-img" src="assets/img/logos/polisen.svg" alt="Swedish Police Logo" />
@@ -531,7 +532,7 @@
                                 <p class="testimonial-author">- Nazar Jaber, Senior Solution Architect</p>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" data-testimonial-id="2">
                             <div class="testimonial-wrapper">
                                 <a href="#portfolioModal3" data-bs-toggle="modal">
                                     <img class="testimonial-img" src="assets/img/logos/vattenfall.svg" alt="Vattenfall Logo" />
@@ -543,6 +544,15 @@
                                     <p>If Andy says he can get something done, it will be done! I would happily join forces with Andy again to make great systems and great companies!</p>
                                 </div>
                                 <p class="testimonial-author">- Gunnar Gustavsson, Senior Solution Architect</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-testimonial-id="3">
+                            <div class="testimonial-wrapper">
+                                <a href="#portfolioModal1" data-bs-toggle="modal">
+                                    <img class="testimonial-img" src="assets/img/logos/swedish-heritage-colored.svg" alt="Swedish National Heritage Board Logo" />
+                                </a>
+                                <p class="testimonial-quote">We had been deliberately dodging security issues in our systems and focusing on features instead, which was starting to become a bottleneck for our entire operation. Andy came on board and turned things around fast. He delivered a secure, scalable system that hit our deadlines and saved us a ton of time. His solution was so straightforward to roll out that it was a no-brainer. He made our day-to-day operations smoother and more efficient. Andy didn’t just fix a problem; he gave us a foundation we can build on without worrying about risks or delays. His work was a lifesaver for us.</p>
+                                <p class="testimonial-author">- Mathias Åkerberg, DevSecOps Engineer</p>
                             </div>
                         </div>
                     </div>
@@ -578,9 +588,10 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <h2 class="text-uppercase">Swedish National Heritage Board</h2>
-                                    <p class="item-intro text-muted">Secured legacy & modern systems delivered on time</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="Swedish Heritage Project" />
+                                    <p class="item-intro text-muted">Secured legacy and modern systems, delivered on time</p>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="Swedish National Heritage Board Project" />
                                     <p>Facing a tight two-month deadline, I secured the Swedish National Heritage Board’s aging systems while supporting their shift to new services. Poor planning had left their migration at risk—vague security goals and siloed teams threatened delays. I delivered a secure, scalable system on schedule, ensuring compliance and protection. <em>Past work; no current affiliation.</em></p>
+                                    <p><a href="#testimonials?show=3" data-bs-dismiss="modal">See client testimonials</a></p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -627,7 +638,7 @@
                                     <p class="item-intro text-muted">Modernized energy trading, improved reliability</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="Vattenfall Project" />
                                     <p>From 2019 to 2021, I modernized Vattenfall’s energy trading platform, replacing outdated systems with scalable solutions. My roadmap ensured we hit every deadline, cutting costs and boosting reliability. <em>Past work; no current affiliation.</em></p>
-                                    <p><a href="#testimonials" data-bs-dismiss="modal">See client testimonials</a></p>
+                                    <p><a href="#testimonials?show=2" data-bs-dismiss="modal">See client testimonials</a></p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -674,7 +685,7 @@
                                     <p class="item-intro text-muted">Transformed legacy judicial information system, cut costs</p>
                                     <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="Swedish Police Project" />
                                     <p>From 2015 to 2017, I modernized the Swedish Police’s Judicial Information System, transforming a legacy mainframe into a scalable modern system. My automation of workflow processes saved months of effort, delivering on time and cutting maintenance costs that previous teams could not deliver. <em>Past work; no current affiliation.</em></p>
-                                    <p><a href="#testimonials" data-bs-dismiss="modal">See client testimonials</a></p>
+                                    <p><a href="#testimonials?show=1" data-bs-dismiss="modal">See client testimonials</a></p>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -720,12 +731,15 @@
                     navbar.classList.add('navbar-light');
                 }
             });
+
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const targetId = this.getAttribute('href');
+                    const href = this.getAttribute('href');
+                    const [targetId, query] = href.split('?');
                     const targetElement = document.querySelector(targetId);
                     if (!targetElement) return;
+
                     const openModals = document.querySelectorAll('.modal.show');
                     if (openModals.length > 0) {
                         openModals.forEach(modal => {
@@ -734,13 +748,42 @@
                                 bsModal.hide();
                             }
                         });
-                        setTimeout(() => {
-                            targetElement.scrollIntoView({ behavior: 'smooth' });
-                        }, 200);
-                    } else {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
                     }
+
+                    setTimeout(() => {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+
+                        if (targetId === '#testimonials' && query) {
+                            const urlParams = new URLSearchParams(query);
+                            const showTestimonial = urlParams.get('show');
+                            if (showTestimonial) {
+                                const carousel = document.getElementById('testimonialCarousel');
+                                const carouselInstance = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
+                                const items = carousel.querySelectorAll('.carousel-item');
+                                items.forEach((item, index) => {
+                                    if (item.getAttribute('data-testimonial-id') === showTestimonial) {
+                                        carouselInstance.to(index);
+                                    }
+                                });
+                            }
+                        }
+                    }, 200);
                 });
+            });
+
+            window.addEventListener('load', function() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const showTestimonial = urlParams.get('show');
+                if (showTestimonial && window.location.hash === '#testimonials') {
+                    const carousel = document.getElementById('testimonialCarousel');
+                    const carouselInstance = bootstrap.Carousel.getInstance(carousel) || new bootstrap.Carousel(carousel);
+                    const items = carousel.querySelectorAll('.carousel-item');
+                    items.forEach((item, index) => {
+                        if (item.getAttribute('data-testimonial-id') === showTestimonial) {
+                            carouselInstance.to(index);
+                        }
+                    });
+                }
             });
         </script>
     </body>
