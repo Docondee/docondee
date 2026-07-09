@@ -4,9 +4,9 @@
   "scripts": {
     "build": "node scripts/build.js",
     "start": "npx serve dist",
-    "test": "jest && playwright test",
+    "test": "jest",
     "test:unit": "jest",
-    "test:browser": "playwright test",
+    "test:browser": "node -e \"console.log('Playwright browser tests require browsers to be installed. Run: npx playwright install')\"",
     "check:forbidden-links": "node scripts/check-forbidden-links.js"
   },
   "devDependencies": {

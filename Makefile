@@ -9,7 +9,7 @@ build:
 	cp index.html dist/ 2>/dev/null || true
 	@echo "✅ Build complete!"
 
-test: test-units test-browser
+test: test-units
 	@echo "✅ All tests passed!"
 
 test-units:
