@@ -39,3 +39,11 @@ make dagger-test   # Dagger CI/CD pipeline
 
 ## Verification Gate
 All tests must pass. No forbidden links allowed in source files.
+
+## Branch Workflow Rules
+- **ALWAYS create a new branch** before making changes: `git checkout -b <branch-name>`
+- **NEVER push directly to main** - always branch first
+- **NEVER squash commits** on the user's repo (preserve history)
+- Branch naming: `fix/description-YYYYMMDD` or `feat/description-YYYYMMDD`
+- Push branch: `git push origin <branch-name>`
+- Create PR via GitHub UI or gh CLI (requires auth token)
