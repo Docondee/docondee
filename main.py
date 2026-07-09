@@ -6,29 +6,14 @@ Runs all build/test/verify stages in a Dagger session.
 
 import subprocess
 import sys
-
-def run_in_dagger(command):
-    """Run a command in a Dagger session."""
-    try:
-        result = subprocess.run(
-            ['dagger', 'run', 'python', '-c', f'''
-import subprocess
-result = subprocess.run({command}, capture_output=True, text=True)
-print(result.stdout)
-exit(result.returncode)
-'''],
-            capture_output=True,
-            text=True
-        )
-        return result.returncode == 0
-    except Exception as e:
-        print(f"Error: {e}")
-        return False
+import os
 
 def run_local(command):
     """Fallback to local execution."""
     result = subprocess.run(command, capture_output=True, text=True, shell=True)
     print(result.stdout)
+    if result.stderr:
+        print(result.stderr)
     return result.returncode == 0
 
 def check_links():
@@ -39,13 +24,20 @@ def check_links():
 def build():
     """Build the static site."""
     print("🔨 Building Docondee site...")
-    return run_local('''
-mkdir -p dist && 
-cp -r css dist/ 2>/dev/null || true &&
-cp -r assets dist/ 2>/dev/null || true &&
-cp js/*.js dist/ 2>/dev/null || true &&
-cp index.html dist/ 2>/dev/null || true
-''')
+    # Create dist and copy all assets
+    commands = [
+        'mkdir -p dist/css',
+        'mkdir -p dist/js',
+        'mkdir -p dist/assets',
+        'cp -r css/* dist/css/ 2>/dev/null || true',
+        'cp -r assets/* dist/assets/ 2>/dev/null || true',
+        'cp js/*.js dist/js/ 2>/dev/null || true',
+        'cp index.html dist/',
+    ]
+    for cmd in commands:
+        run_local(cmd)
+    print("✅ Build complete!")
+    return True
 
 def test_units():
     """Run unit tests."""
@@ -60,25 +52,41 @@ def test_browser():
 def verify_build():
     """Verify build output."""
     print("🔍 Verifying build...")
-    return run_local('''
-test -d dist && 
-test -f dist/index.html && 
-test -f dist/css/styles.css && 
-echo "✅ Build verification passed!"
-''')
+    # Check all expected files exist
+    required_files = [
+        'dist/index.html',
+        'dist/css/styles.css',
+        'dist/js/scripts.js'
+    ]
+    all_exist = True
+    for f in required_files:
+        if not os.path.exists(f):
+            print(f"❌ Missing: {f}")
+            all_exist = False
+    
+    if all_exist:
+        print("✅ Build verification passed!")
+        return True
+    else:
+        print("❌ Build verification failed")
+        return False
 
 def lint_html():
     """Check HTML structure."""
     print("🔍 Linting HTML...")
-    return run_local('''
-grep -qi "<!doctype" dist/index.html && 
-echo "✅ Valid doctype found" &&
-echo "✅ HTML structure valid!"
-''')
+    return run_local('grep -qi "<!doctype" dist/index.html && echo "✅ Valid doctype found" && echo "✅ HTML structure valid!"')
 
 if __name__ == '__main__':
-    import os
     os.chdir('/home/asimov/repository/git/projects/docondee-site')
+    
+    stages = {
+        'check-links': check_links,
+        'build': build,
+        'test-units': test_units,
+        'test-browser': test_browser,
+        'verify-build': verify_build,
+        'lint-html': lint_html,
+    }
     
     if len(sys.argv) < 2:
         # Run full pipeline
@@ -90,16 +98,7 @@ if __name__ == '__main__':
                 sys.exit(1)
         print("✅ Dagger pipeline complete!")
     else:
-        # Run specific stage
         stage = sys.argv[1]
-        stages = {
-            'check-links': check_links,
-            'build': build,
-            'test-units': test_units,
-            'test-browser': test_browser,
-            'verify-build': verify_build,
-            'lint-html': lint_html,
-        }
         if stage in stages:
             stages[stage]()
         else:
