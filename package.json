@@ -1,0 +1,16 @@
+{
+  "name": "docondee-site",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "start": "npx serve dist",
+    "test": "jest && playwright test",
+    "test:unit": "jest",
+    "test:browser": "playwright test",
+    "check:forbidden-links": "node scripts/check-forbidden-links.js"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "playwright": "^1.40.0"
+  }
+}
