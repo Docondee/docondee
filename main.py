@@ -8,51 +8,50 @@ import subprocess
 import sys
 import os
 
-def run_local(command):
-    """Fallback to local execution."""
+def run_in_dagger(command):
+    """Run a shell command in the current environment (works with dagger run)."""
     result = subprocess.run(command, capture_output=True, text=True, shell=True)
     print(result.stdout)
     if result.stderr:
-        print(result.stderr)
+        print(result.stderr, file=sys.stderr)
     return result.returncode == 0
 
 def check_links():
     """Check for forbidden links."""
     print("🔗 Checking for forbidden links...")
-    return run_local('node scripts/check-forbidden-links.js')
+    return run_in_dagger('node scripts/check-forbidden-links.js')
 
 def build():
     """Build the static site."""
     print("🔨 Building Docondee site...")
-    # Create dist and copy all assets
+    # Create dist and copy all assets from source directories
     commands = [
-        'mkdir -p dist/css',
-        'mkdir -p dist/js',
-        'mkdir -p dist/assets',
-        'cp -r css/* dist/css/ 2>/dev/null || true',
-        'cp -r assets/* dist/assets/ 2>/dev/null || true',
-        'cp js/*.js dist/js/ 2>/dev/null || true',
+        'mkdir -p dist',
+        'cp -r css dist/',       # css/styles.css → dist/css/styles.css
+        'cp -r js dist/',         # js/scripts.js → dist/js/scripts.js  
+        'cp -r assets dist/',     # assets/img/* → dist/assets/img/*
         'cp index.html dist/',
     ]
     for cmd in commands:
-        run_local(cmd)
+        run_in_dagger(cmd)
+    
     print("✅ Build complete!")
     return True
 
 def test_units():
     """Run unit tests."""
     print("🧪 Running unit tests...")
-    return run_local('npm run test:unit')
+    return run_in_dagger('npm run test:unit')
 
 def test_browser():
     """Run browser tests."""
     print("🌐 Running browser tests...")
-    return run_local('npm run test:browser')
+    return run_in_dagger('npm run test:browser')
 
 def verify_build():
     """Verify build output."""
     print("🔍 Verifying build...")
-    # Check all expected files exist
+    # Check all expected files exist in dist/
     required_files = [
         'dist/index.html',
         'dist/css/styles.css',
@@ -74,7 +73,7 @@ def verify_build():
 def lint_html():
     """Check HTML structure."""
     print("🔍 Linting HTML...")
-    return run_local('grep -qi "<!doctype" dist/index.html && echo "✅ Valid doctype found" && echo "✅ HTML structure valid!"')
+    return run_in_dagger('grep -qi "<!doctype" dist/index.html && echo "✅ Valid doctype found" && echo "✅ HTML structure valid!"')
 
 if __name__ == '__main__':
     os.chdir('/home/asimov/repository/git/projects/docondee-site')
@@ -101,6 +100,7 @@ if __name__ == '__main__':
         stage = sys.argv[1]
         if stage in stages:
             stages[stage]()
+            sys.exit(0)
         else:
             print(f"Unknown stage: {stage}")
             sys.exit(1)
