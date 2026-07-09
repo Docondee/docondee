@@ -1,45 +1,44 @@
-.PHONY: build test test-units test-browser verify-build check-links dagger-test clean lint-html
+.PHONY: build test test-units test-browser verify-build check-links dagger-test lint-html clean
 
-# Main entry: runs through dagger pipeline
-dagger-test: check-links build test-units test-browser
-	@echo "✅ All pipeline stages complete!"
+# All commands go through main.py (Dagger pipeline) except clean
 
 build:
-	@echo "🔨 Building Docondee site..."
-	@mkdir -p dist
-	@cp -r css dist/ 2>/dev/null || true
-	@cp -r assets dist/ 2>/dev/null || true
-	@cp js/*.js dist/ 2>/dev/null || true
-	@cp index.html dist/ 2>/dev/null || true
+	@echo "🔨 Building via main.py..."
+	@python3 main.py build
 	@echo "✅ Build complete!"
 
 test:
-	@echo "🧪 Running all tests..."
-	@make test-units
+	@echo "🧪 Running full test via main.py..."
+	@python3 main.py
+	@echo "✅ All tests passed!"
 
 test-units:
-	@echo "🧪 Running unit tests..."
-	@npm run test:unit
+	@echo "🧪 Running unit tests via main.py..."
+	@python3 main.py test-units
+	@echo "✅ Unit tests complete!"
 
 test-browser:
-	@echo "🌐 Running browser tests..."
-	@npm run test:browser
+	@echo "🌐 Running browser tests via main.py..."
+	@python3 main.py test-browser
+	@echo "✅ Browser tests complete!"
 
 check-links:
-	@echo "🔗 Checking for forbidden links..."
-	@node scripts/check-forbidden-links.js
+	@echo "🔗 Checking for forbidden links via main.py..."
+	@python3 main.py check-links
+	@echo "✅ Link check complete!"
 
-verify-build: build
-	@echo "🔍 Verifying build output..."
-	@test -d dist || (echo "❌ dist/ directory missing!" && exit 1)
-	@test -f dist/index.html || (echo "❌ dist/index.html missing!" && exit 1)
-	@echo "✅ Build verification passed!"
+verify-build:
+	@echo "🔍 Verifying build via main.py..."
+	@python3 main.py verify-build
+	@echo "✅ Verification complete!"
 
 lint-html:
-	@echo "🔍 Checking dist HTML structure..."
-	@test -d dist && test -f dist/index.html || make build
-	@grep -qi '<!doctype' dist/index.html && echo "✅ Valid doctype found" || echo "❌ Missing doctype"
-	@echo "✅ HTML structure valid!"
+	@echo "🔍 Linting HTML via main.py..."
+	@python3 main.py lint-html
+	@echo "✅ Lint complete!"
+
+dagger-test: check-links build test-units test-browser
+	@echo "✅ All Dagger pipeline stages complete!"
 
 clean:
 	@echo "🧹 Cleaning..."
