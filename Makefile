@@ -1,6 +1,6 @@
-.PHONY: build test test-units test-browser verify-build check-links dagger-test lint-html clean
+.PHONY: build test test-units test-browser verify-build check-links dagger-test test-all lint-html clean
 
-# All commands go through Dagger CLI
+# All commands go through Dagger CLI → main.py
 
 build:
 	@echo "🔨 Building Docondee site via Dagger..."
@@ -9,7 +9,12 @@ build:
 
 test:
 	@echo "🧪 Running all tests via Dagger..."
-	@dagger run python3 main.py
+	@dagger run python3 main.py test-all
+	@echo "✅ All tests passed!"
+
+test-all:
+	@echo "🧪 Running all tests via Dagger..."
+	@dagger run python3 main.py test-all
 	@echo "✅ All tests passed!"
 
 test-units:
